@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;600&display=swap');
+
+:root {
+    --main-font: 'Red Hat Display', sans-serif;
+    --brown-red: #c99190;
+    --lighter-redbrown: #caa3a2;
+    --pinkish: #e6bbbb;
+    --pinkish-light: #ffd3d3;
+    --brown-pink: #e6c4bb;
+    --light-gold: #e4ccc0;
+    --gold: #ccb2bb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--pinkish-light);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--gold);
+    font-family: var(--main-font);
+    padding: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: 100px;
+}
