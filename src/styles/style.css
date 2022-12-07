@@ -92,7 +92,145 @@ footer {
     width: 100%;
 }
 
+.link-images {
+    height: 100%;
+    width: 100%;
+    background-color: azure;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
 .overlay a {
     text-decoration: none;
     color: black;
+}
+
+/* when images are hovered over, they get a little bigger and have a light blue shadow */
+.overlay:hover {
+    transition: .5s;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.link-pink:hover {
+    box-shadow: 0 0 10px 2px var(--light-pink);
+}
+
+.link-purp:hover {
+    box-shadow: 0 0 10px 2px var(--purple);
+}
+
+.link-blue:hover {
+    box-shadow: 0 0 10px 2px #29b6f6;
+}
+
+.link-darkpink:hover {
+    box-shadow: 0 0 10px 2px #ff1493;
+}
+
+.overlay {
+    position: relative;
+    font-family: var(--font-fam);
+    border-radius: 10px;
+} 
+
+.skills {
+    margin: 5%;
+}
+
+.row-1, .row-2, .row-3 {
+    display: grid;
+}
+
+.item-1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    align-self: center;
+    text-align: center;
+    background-color: rgb(52, 52, 52);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.item-2 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    text-align: center;
+    align-self: center;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.item-3 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    text-align: center;
+    align-self: center;
+    background-color: rgb(52, 52, 52);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.item-4 {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    text-align: center;
+    align-self: center;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.row-1-content, 
+.row-2-content, 
+.row-3-content {
+    margin: 3%;
+}
+
+/* setting the first image to be the biggest */
+#image-grid-col-row {
+    grid-column: span 3;
+    grid-row: span 1;
+    height: 350px;
+}
+
+
+
+/* text to overlay over the images */
+.h3-overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    height: 20%;
+    transition: .5s ease;
+    color: white;
+    font-weight: normal;
+    font-size: 30px;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.selfie {
+    border-radius: 10px;
+}
+
+.selfieContainer {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    
 }
