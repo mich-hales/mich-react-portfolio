@@ -5,6 +5,7 @@ import Contact from './pages/Contact';
 import AboutMe from './pages/AboutMe';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
+import Footer from './components/Footer';
 
 function App() {
     let component;
@@ -28,9 +29,10 @@ function App() {
     return (
         <div>
             <Navbar />
-            <div className='component'>
+            <div>
                 {component}
             </div>
+            <Footer />
         </div>
     )
 }

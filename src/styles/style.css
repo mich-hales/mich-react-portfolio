@@ -21,19 +21,78 @@ body {
     background-color: var(--pinkish-light);
 }
 
-nav {
+.mainNavbar {
     display: flex;
     justify-content: space-between;
-    background-color: var(--gold);
+    background-color: var(--brown-red);
     font-family: var(--main-font);
     padding: 2rem;
 }
 
-nav a {
+.mainNavbar a {
     text-decoration: none;
     color: black;
 }
 
+.mainNavbar a:hover {
+    color: var(--pinkish-light);
+    transition: .05s;
+}
+
 h1 {
-    font-size: 100px;
+    font-size: 5rem;
+}
+
+footer {
+    position: relative;
+    height: 3rem;
+    width: 100%;
+}
+
+.footerLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brown-red);
+}
+
+.footerLinks li {
+    list-style-type: none;
+    margin: 2rem;
+}
+
+.footerLinks li a {
+    text-decoration: none;
+    color: black;
+}
+
+.imagelogos {
+    height: 20px;
+    width: 20px;
+}
+
+.imagelogos:hover {
+    opacity: 60%;
+    transition: .05s;
+}
+
+.contentContainer {
+    min-height: calc(100vh - 32px);
+}
+
+.portfolioLinks {
+    list-style: none;
+    box-sizing: border-box;
+    padding: 16px;
+    display: grid;
+    gap: 50px 50px;
+    justify-content: center;
+    grid-template-columns: repeat(3, .3fr);
+    position: relative;
+    width: 100%;
+}
+
+.overlay a {
+    text-decoration: none;
+    color: black;
 }

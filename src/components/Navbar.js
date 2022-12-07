@@ -2,12 +2,12 @@ import React from 'react';
 
 export default function Navbar() {
     return (
-        <nav>
-            <a href="/">Home</a>
-            <a href="/aboutme">About Me</a>
-            <a href="/portfolio">Portfolio</a>
-            <a href="/resume">Resume</a>
-            <a href="/contact">Contact</a>
+        <nav className='mainNavbar'>
+            <a className='nav-link active' href="/">Home</a>
+            <a className='nav-link' href="/aboutme">About Me</a>
+            <a className='nav-link' href="/portfolio">Portfolio</a>
+            <a className='nav-link' href="/resume">Resume</a>
+            <a className='nav-link' href="/contact">Contact</a>
         </nav>
     )
 }
