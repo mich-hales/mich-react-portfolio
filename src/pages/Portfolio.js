@@ -11,7 +11,7 @@ import Readme from '../images/readme.png';
 import Notetaker from '../images/note-taker.png';
 
 
-export default function aboutMe() {
+export default function portfolio() {
     return (
         <div className='contentContainer container'>
             <section className="my-work" id="link2">
@@ -68,30 +68,6 @@ export default function aboutMe() {
                         <h3  className="h3-overlay small-overlay">Note Taker</h3>
                     </div>
             </div>
-        </section>
-
-
-        <section className="skills" id="skills">
-            <h2 className="subtitle">Skills</h2>
-            <div className="row-1">
-                <p className="row-1-content item-1">HTML / CSS</p>
-                <p className="row-1-content item-2">JavaScript</p>
-                <p className="row-1-content item-3">MySQL</p>
-                <p className="row-1-content item-4">React</p>
-            </div>
-            <div className="row-2">
-                <p className="row-2-content item-1">Object Oriented Programming (OOP)</p>
-                <p className="row-2-content item-2">Model View Controller (MVC)</p>
-                <p className="row-2-content item-3">APIs</p>
-                <p className="row-2-content item-4">GitHub and Git</p>
-            </div>
-            <div className="row-3">
-                <p className="row-3-content item-1">Express.js</p>
-                <p className="row-3-content item-2">Sequelize</p>
-                <p className="row-3-content item-3">Node.js</p>
-                <p className="row-3-content item-4">Bootstrap</p>
-            </div>
-
         </section>
 
         </div>

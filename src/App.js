@@ -14,6 +14,9 @@ function App() {
         case '/':
             component = <Home />
             break;
+        case '/mich-react-portfolio':
+            component = <Home />
+            break;
         case '/contact':
             component = <Contact />
             break;
@@ -24,7 +27,7 @@ function App() {
             component = <Portfolio />
             break;
         case '/resume':
-            component = <Resume />
+            component = <Resume pageNumber={1} />
     }
     return (
         <div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function aboutMe() {
+export default function contact() {
     return (
         <div className='contentContainer container'>
             <h1>Contact</h1>
