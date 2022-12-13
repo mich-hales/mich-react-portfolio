@@ -12,10 +12,10 @@ function App() {
     // eslint-disable-next-line default-case
     switch(window.location.pathname) {
         case '/':
-            component = <Home />
+            component = <AboutMe />
             break;
         case '/mich-react-portfolio':
-            component = <Home />
+            component = <AboutMe />
             break;
         case '/contact':
             component = <Contact />
