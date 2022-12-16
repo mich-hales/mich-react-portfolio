@@ -1,24 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 export default function Navbar() {
 
-    const [active, setActive] = useState(null);
-    // Function to handle navbar element clicks
-    function handleClick(elem) {
-        setActive(elem);
-    }
+    let location = window.location.pathname;
 
     return (
         <nav className='mainNavbar'>
             <div className='icon-nav'>
-                <a className='nav-link' onClick={() => handleClick('active-tab')} href="/">MICH</a>
+                <a className={location === '/' || location === '/aboutme' ? 'active-tab-icon' : 'icon-nav'}  href="/">MICH</a>
             </div>
                 
             <div className='other-nav'>
-                <a className='nav-link' onClick={() => handleClick('active-tab')}  href="/aboutme">About Me</a>
-                <a className='nav-link' onClick={() => handleClick('active-tab')}  href="/portfolio">Portfolio</a>
-                <a className='nav-link' onClick={() => handleClick('active-tab')}  href="/resume">Resume</a>
-                <a className='nav-link' onClick={() => handleClick('active-tab')}  href="/contact">Contact</a>
+                <a className={location === '/aboutme' || location === '/' ? 'active-tab' : 'nav-link'}   href="/aboutme">About Me</a>
+
+                <a className={location === '/portfolio' ? 'active-tab' : 'nav-link'}   href="/portfolio">Portfolio</a>
+
+                <a className={location === '/resume' ? 'active-tab' : 'nav-link'}   href="/resume">Resume</a>
+
+                <a className={location === '/contact' ? 'active-tab' : 'nav-link'}   href="/contact">Contact</a>
             </div>
         </nav>
     )

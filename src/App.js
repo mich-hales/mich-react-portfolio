@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
 import Contact from './pages/Contact';
 import AboutMe from './pages/AboutMe';
 import Portfolio from './pages/Portfolio';
