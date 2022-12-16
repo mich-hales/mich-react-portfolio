@@ -3,7 +3,7 @@ import GitHubImg from '../images/github-logo.png';
 import EmailImg from '../images/email-img.png';
 import LinkedinImg from '../images/linkedin-img.png';
 
-export default function footer() {
+export default function Footer() {
     return (
         <footer>
             <ul className='footerLinks'>

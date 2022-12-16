@@ -2,7 +2,7 @@ import React from 'react';
 import Selfie from '../images/selfie.jpg';
 import Avatar from '../images/big-hello.png';
 
-export default function aboutMe() {
+export default function AboutMe() {
     return (
         <div className='contentContainer m-3'>
             <div className='selfieContainer'>

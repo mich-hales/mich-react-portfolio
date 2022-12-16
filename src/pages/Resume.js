@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function resume() {
+export default function Resume() {
     const downloadFile = () => {
         fetch('Michelle_Hales_Resume.pdf').then(res => {
             res.blob().then(blob => {

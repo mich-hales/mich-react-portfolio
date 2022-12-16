@@ -1,24 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-export default function contact() {
+function Contact() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormData({ ...formData, [name]: value });
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if (!formData.message) {
+            setErrorMessage('Please enter a message.');
+        } else {
+            setFormData({ name: '', email: '', message: ''});
+            setErrorMessage('');
+        }
+    };
+
     return (
         <div className='contentContainer container'>
             <h1 className='contactHeader'>Contact</h1>
+            <form onSubmit={handleSubmit}>
             <div className='contactInput'>
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="nameInput" placeholder="Jane Doe"/>
+                <div className="mb-3">
+                    <label htmlFor="name" className="form-label">Name</label>
+                    <input type="text" className="form-control" id="name" name='name' value={formData.name} onChange={handleChange} placeholder="Jane Doe"/>
                 </div>
-                <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Email Address</label>
-                    <input type="text" class="form-control" id="emailInput" placeholder="example@email.com"/>
+                <div className="mb-3">
+                    <label htmlFor="email" className="form-label">Email</label>
+                    <input type="text" className="form-control" id="email" name='email' value={formData.email} onChange={handleChange} placeholder="example@email.com"/>
                 </div>
-                <div class="mb-3">
-                    <label for="messageInput" class="form-label">Message</label>
-                    <textarea class="form-control" id="messageInput" rows="5"></textarea>
+                <div className="mb-3">
+                    <label htmlFor="message" className="form-label">Message</label>
+                    <textarea className="form-control" id="message" name='message' value={formData.message} onChange={handleChange} rows="5"></textarea>
                 </div>
-                <button className='btn'>Submit</button>
+                {errorMessage && (
+                    <div className='alert alert-danger'>
+                        <p className='errorMessage'>{errorMessage}</p>
+                        {console.log(errorMessage)}
+                    </div>
+                )}
+                <button className='btn' type='submit'>Submit</button>
             </div>
+            </form>
         </div>
     )
 }
+
+export default Contact;

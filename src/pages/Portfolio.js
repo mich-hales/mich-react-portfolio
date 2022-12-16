@@ -11,7 +11,7 @@ import Readme from '../images/readme.png';
 import Notetaker from '../images/note-taker.png';
 
 
-export default function portfolio() {
+export default function Portfolio() {
     return (
         <div className='contentContainer container'>
             <section className="my-work" id="link2">

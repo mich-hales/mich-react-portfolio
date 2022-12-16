@@ -30,6 +30,11 @@ body {
     font-family: var(--main-font);
 }
 
+.errorMessage {
+    font-size: 1rem;
+    color: black;
+}
+
 .mainNavbar {
     display: flex;
     justify-content: space-between;
