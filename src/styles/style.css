@@ -35,6 +35,11 @@ body {
     color: black;
 }
 
+.field-required {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .mainNavbar {
     display: flex;
     justify-content: space-between;

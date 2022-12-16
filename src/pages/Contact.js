@@ -8,6 +8,9 @@ function Contact() {
     });
 
     const [errorMessage, setErrorMessage] = useState('');
+    const [nameError, setNameError] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [messageError, setMessageError] = useState('');
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -35,15 +38,36 @@ function Contact() {
             <div className='contactInput'>
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">Name</label>
-                    <input type="text" className="form-control" id="name" name='name' value={formData.name} onChange={handleChange} placeholder="Jane Doe"/>
+                    <input type="text" className="form-control" id="name" name='name' value={formData.name} onChange={handleChange} placeholder="Enter your name" onBlur={(event) => {
+                        if (!event.target.value) {
+                            setNameError('This field is required.');
+                        } else {
+                            setNameError('');
+                        }
+                    }}/>
+                    {nameError && <div className='alert alert-danger field-required'>{nameError}</div>}
                 </div>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email</label>
-                    <input type="text" className="form-control" id="email" name='email' value={formData.email} onChange={handleChange} placeholder="example@email.com"/>
+                    <input type="text" className="form-control" id="email" name='email' value={formData.email} onChange={handleChange} placeholder="Enter your email address" onBlur={(event) => {
+                        if (!event.target.value) {
+                            setEmailError('This field is required.');
+                        } else {
+                            setEmailError('');
+                        }
+                    }}/>
+                    {emailError && <div className='alert alert-danger field-required'>{emailError}</div>}
                 </div>
                 <div className="mb-3">
                     <label htmlFor="message" className="form-label">Message</label>
-                    <textarea className="form-control" id="message" name='message' value={formData.message} onChange={handleChange} rows="5"></textarea>
+                    <textarea className="form-control" id="message" name='message' rows="5" value={formData.message} onChange={handleChange} placeholder='Enter your message' onBlur={(event) => {
+                        if (!event.target.value) {
+                            setMessageError('This field is required.');
+                        } else {
+                            setMessageError('');
+                        }
+                    }}/>
+                    {messageError && <div className='alert alert-danger field-required'>{messageError}</div>}
                 </div>
                 {errorMessage && (
                     <div className='alert alert-danger'>
