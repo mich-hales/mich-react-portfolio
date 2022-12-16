@@ -187,6 +187,22 @@ footer {
   align-items: center;
   border-radius: 10px;
 }
+
+.main-hover {
+    font-size: 2rem;
+}
+
+.main-hover:hover {
+    opacity: 60%;
+}
+
+.logo-hover {
+    font-size: 1rem;
+}
+
+.logo-hover:hover {
+    opacity: 60%;
+}
   
 .image-container .overlay {
   position: absolute;
@@ -196,8 +212,7 @@ footer {
   width: 100%;
   height: 0;
   overflow: hidden;
-  background-color: white;
-  color: black;
+  background-color: var(--cutestpurp);
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease;
@@ -281,7 +296,6 @@ footer {
 #image-grid-col-row {
     grid-column: span 3;
     grid-row: span 1;
-    height: 350px;
 }
 
 /* text to overlay over the images */

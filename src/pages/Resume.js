@@ -15,6 +15,8 @@ export default function Resume() {
     
     return (
         <div className="contentContainer container">
+            <h1 className='contactHeader'>Resume</h1>
+
             <section className="skills">
                 <h4>Download My Resume<span><button id="downloadBtn" className='btn' onClick={downloadFile} value="download">Download</button></span></h4>
             </section>
