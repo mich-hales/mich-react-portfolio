@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 
 function Contact() {
+    // setting form data
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: ''
     });
 
+    // error messages for each field
     const [errorMessage, setErrorMessage] = useState('');
     const [nameError, setNameError] = useState('');
     const [emailError, setEmailError] = useState('');
@@ -17,6 +19,7 @@ function Contact() {
         setFormData({ ...formData, [name]: value });
     }
 
+    // handles the submit button and will display error messages accordingly
     const handleSubmit = (event) => {
         event.preventDefault();
         const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
